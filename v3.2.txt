@@ -1,0 +1,106 @@
+
+©À©¤public
+©¦  ©¦  favicon.ico
+©¦  ©¦  
+©¦  ©¸©¤css
+©¦          style.less
+©¦          style.wxss
+©¦          
+©¸©¤src
+    ©¦  App.vue
+    ©¦  index.css
+    ©¦  main.js
+    ©¦  
+    ©À©¤assets
+    ©¦  ©¦  111.gif
+    ©¦  ©¦  
+    ©¦  ©¸©¤imgs
+    ©¦          111.gif
+    ©¦          404.jpg
+    ©¦          lbg.webp
+    ©¦          side0.jpg
+    ©¦          titlebg.png
+    ©¦          
+    ©À©¤components
+    ©¦  ©¸©¤layout
+    ©¦      ©¦  index.vue
+    ©¦      ©¦  
+    ©¦      ©¸©¤components
+    ©¦          ©À©¤header
+    ©¦          ©¦      breadcrumb.vue
+    ©¦          ©¦      index.vue
+    ©¦          ©¦      
+    ©¦          ©À©¤leftmenus
+    ©¦          ©¦      index.vue
+    ©¦          ©¦      menuItem.vue
+    ©¦          ©¦      
+    ©¦          ©À©¤main
+    ©¦          ©¦      index.vue
+    ©¦          ©¦      
+    ©¦          ©¸©¤navbar
+    ©¦                  index.vue
+    ©¦                  
+    ©À©¤directive
+    ©¦  ©¦  index.js
+    ©¦  ©¦  
+    ©¦  ©¸©¤permisons
+    ©¦          has.js
+    ©¦          
+    ©À©¤icons
+    ©¦  ©À©¤components
+    ©¦  ©¦      svgIcon.vue
+    ©¦  ©¦      
+    ©¦  ©¸©¤svg
+    ©¦          
+    ©¦          
+    ©À©¤plugins
+    ©¦      svgBuilder.js
+    ©¦      
+    ©À©¤router
+    ©¦      2.js
+    ©¦      allRoutes.js
+    ©¦      index.js
+    ©¦      router.js
+    ©¦      
+    ©À©¤store
+    ©¦      fullscreen.js
+    ©¦      hamburg.js
+    ©¦      navBar.js
+    ©¦      permison.js
+    ©¦      
+    ©À©¤utils
+    ©¦  ©¦  config.js
+    ©¦  ©¦  elementui.js
+    ©¦  ©¦  jsencrypt.js
+    ©¦  ©¦  routes.js
+    ©¦  ©¦  
+    ©¦  ©¸©¤request
+    ©¦          api.js
+    ©¦          axios.js
+    ©¦          downloads.js
+    ©¦          http.js
+    ©¦          
+    ©¸©¤views
+        ©À©¤commonTable
+        ©¦      index.vue
+        ©¦      
+        ©À©¤home
+        ©¦      index.vue
+        ©¦      
+        ©À©¤login
+        ©¦      index.vue
+        ©¦      
+        ©À©¤notFound
+        ©¦      index.vue
+        ©¦      
+        ©À©¤pinia
+        ©¦      index.vue
+        ©¦      
+        ©¸©¤system       
+            ©À©¤menuMange
+            ©¦  index.vue
+            ©¦  
+            ©¸©¤component
+                 index.vue
+      
+                        
