@@ -11,6 +11,8 @@ import {
   put
 } from './http'
 
+import axios from 'axios'
+
 // --------------------创建后端接口api
 
 //上传、下载------
@@ -29,7 +31,9 @@ const loginVc = get('/sys/util/getImgVc') //验证码获取
 
 const cusInfoList = post('/sys/cusInfo') // 客户信息列表
 const cusInfoDel = Delete('/sys/delCusInfo') // 删除客户信息
-const cusInfoOpen = post('/sys/cusInfoOpen') // 启用客户信息
+export function cusInfoOpen(data) {
+  return axios.post('/sys/cusInfoOpen', data)
+} // 启用客户信息
 const cusAdd = post('/sys/cusAdd') // 添加客户信息
 const cusEdit = put('/sys/cusEdit') // 修改客户信息
 const cusDetail = get('/sys/cusDetail') // 获取客户所属组织数据

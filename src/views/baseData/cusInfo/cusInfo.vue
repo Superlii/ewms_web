@@ -20,7 +20,7 @@
 <script setup>
 import { ref, reactive, toRefs, createVNode, nextTick } from "vue";
 import { ExclamationCircleOutlined } from "@ant-design/icons-vue";
-import { cusInfoList, cusInfoOpen, cusInfoDel } from "@/utils/request/api";
+import { cusInfoList, cusInfoOpen, cusInfoDel } from "../../../utils/request/api";
 import mydialog from "./component/dialog.vue";
 //add、edite弹窗控制
 const dialog = ref(null);
