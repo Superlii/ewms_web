@@ -2,7 +2,7 @@
 
 <template>
   <a-layout>
-    <a-layout-sider class="_aside">
+    <a-layout-sider class="_aside" v-model:collapsed="toggleKey">
       <div v-show="!toggleKey" class="_logo">
         <svg-icon size="2rem" name="houtai" />
         <p style="margin-left: 10px" class="title">后台管理系统</p>
@@ -61,11 +61,6 @@ fullscreenData.$subscribe((mutation, state) => {
 }
 
 ._aside {
-  transition: width 0.15s;
-  -webkit-transition: width 0.15s;
-  -moz-transition: width 0.15s;
-  -webkit-transition: width 0.15s;
-  -o-transition: width 0.15s;
   height: 100vh;
   display: flex;
   flex-direction: column;

@@ -18,14 +18,15 @@
 </template>
 
 <script setup>
-import { ref, reactive, toRefs, createVNode, nextTick } from "vue";
+import { ref, reactive, toRefs, createVNode, nextTick, onMounted } from "vue";
 import { ExclamationCircleOutlined } from "@ant-design/icons-vue";
-import { reservoirList, reservoirInfoDel, reservoirOpen } from "@/utils/request/api";
+import { reservoirList, reservoirInfoDel, reservoirOpen, deptTree } from "@/utils/request/api";
 import mydialog from "./component/dialog.vue";
 //add、edite弹窗控制
 const dialog = ref(null);
 const dialogVisible = ref(false);
 const dialogtype = ref("add");
+const deptList = ref([]);
 const dataAll = reactive({
   configsOfTable: {
     data: [],
@@ -67,7 +68,8 @@ const dataAll = reactive({
           search: false,
           show: "text",
           search: true,
-          type: "input",
+          type: "select",
+          list: deptList,
           form_hide: false,
           placeholder: "请输入客户名称",
           align: "center",
@@ -303,6 +305,22 @@ if (configsOfTable.value.pagination.searchall) {
 
 // 操作列
 const mytable = ref(null);
+
+//获取部门列表
+
+function getList() {
+  deptTree().then((res) => {
+    if (res.code !== 200) {
+      message.error(res.message);
+      return false;
+    }
+    deptList.value = res.data;
+  });
+}
+
+onMounted(() => {
+  getList()
+})
 </script>
 
 <style lang="less" scoped></style>

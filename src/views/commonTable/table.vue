@@ -21,7 +21,8 @@
                 :placeholder="item.placeholder"
               >
               </a-input>
-
+              <a-select size="small" v-if="item.type === 'select'" v-model:value="formInline[item.prop]" :options="item.list.map(item => ({id: item.id, value: item.name }))">
+              </a-select>
               <!-- 下拉框 -->
             </a-form-item>
           </a-col>
