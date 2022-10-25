@@ -18,14 +18,21 @@
 </template>
 
 <script setup>
-import { ref, reactive, toRefs, createVNode, nextTick } from "vue";
+import { ref, reactive, toRefs, createVNode, nextTick, onMounted } from "vue";
 import { ExclamationCircleOutlined } from "@ant-design/icons-vue";
-import { cusInfoList, cusInfoOpen, cusInfoDel } from "../../../utils/request/api";
+import {
+  cusInfoList,
+  cusInfoOpen,
+  cusInfoDel,
+  deptTree,
+} from "@/utils/request/api";
 import mydialog from "./component/dialog.vue";
+import { message } from "ant-design-vue";
 //add、edite弹窗控制
 const dialog = ref(null);
 const dialogVisible = ref(false);
 const dialogtype = ref("add");
+const deptList = ref([]);
 const dataAll = reactive({
   configsOfTable: {
     data: [],
@@ -87,7 +94,8 @@ const dataAll = reactive({
           search: false,
           show: "text",
           search: true,
-          type: "input",
+          type: "select",
+          list: deptList,
           form_hide: false,
           placeholder: "请输入客户名称",
           align: "center",
@@ -247,7 +255,6 @@ const dataAll = reactive({
       if (ctx.size == -1) {
         configsOfTable.value.pagination.isShow = false;
       }
-
       // cusInfoList(ctx).then(res => {
       configsOfTable.value.tableConfig.loading = false;
       configsOfTable.value.data = []; //res.data.records
@@ -283,6 +290,18 @@ const dataAll = reactive({
 //data数据结构
 const { configsOfTable, editdata, tableEvent } = toRefs(dataAll);
 
+//获取部门列表
+
+function getList() {
+  deptTree().then((res) => {
+    if (res.code !== 200) {
+      message.error(res.message);
+      return false;
+    }
+    deptList.value = res.data;
+  });
+}
+
 //查询
 
 //更新菜单
@@ -301,6 +320,10 @@ if (configsOfTable.value.pagination.searchall) {
   const { size, current } = configsOfTable.value.pagination;
   tableEvent.value.query({ size, current }); //初始化
 }
+
+onMounted(() => {
+  getList()
+})
 
 // 操作列
 const mytable = ref(null);
