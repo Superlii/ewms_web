@@ -58,6 +58,7 @@ const menuDel = Delete('/sys/menu') //菜单删除
 
 //----------部门管理
 
+const deptList = get('sys/department/list')
 const deptTree = get('/sys/department/tree'); //部门树请求
 const deptAdd = post('/sys/department'); //部门新增
 const deptEdi = put('/sys/department'); //部门修改
@@ -139,6 +140,7 @@ export {
   deptAdd,
   deptEdi,
   deptDel,
+  deptList,
   updateUserPassword,
   restUserPassword,
   userRegiste,

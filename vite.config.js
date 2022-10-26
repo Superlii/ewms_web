@@ -48,7 +48,7 @@ export default ({
   server: {
     open: false,
     port: 8080,
-    host: "0.0.0.0",
+    host: "localhost",
     proxy: {
       "/boot": {
         target: "http://60.205.181.21:8948",
