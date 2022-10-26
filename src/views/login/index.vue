@@ -163,7 +163,7 @@ captchaOnOff.value && getCode();
 getCookie();
 </script>
 
-<style lang='less' scoped>
+<style lang="less" scoped>
 :deep(.ant-form-item-explain-error) {
     color: #ff4d4f;
     display: flex;
