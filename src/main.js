@@ -29,7 +29,7 @@ import svgIcon from './icons/components/svgIcon.vue'
 import router from './router/index'
 import './index.css'
 //全局样式
-import "../public/css/style.less"
+import "../public/css/index.less"
 //全局指令注册
 import directives from './directive/index'
 directives(app)

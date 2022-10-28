@@ -19,6 +19,14 @@ const router = createRouter({
           },
         },
         {
+          path: "superior",
+          name: "superior",
+          component: () => import("@/views/baseData/material/material.vue"),
+          meta: {
+            title: "物料",
+          }
+        },
+        {
           path: "warehouse",
           name: "warehouse",
           component: () => import("@/views/baseData/warehouse/warehouse.vue"),
